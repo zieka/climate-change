@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+export type Decision = 'undecided' | 'yes' | 'no';
+
 @Component({
   selector: 'app-climate-change-table',
   templateUrl: './climate-change-table.component.html',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClimateChangeTableComponent implements OnInit {
 
-  constructor() { }
+  private message: string;
+  private decision: Decision;
+
+  constructor() {
+    this.message = 'Pick a Row!';
+    this.decision = 'undecided';
+  }
 
   ngOnInit() {
+  }
+
+  takeAction() {
+    this.message = 'to take action now!';
+    this.decision = 'yes';
+  }
+
+  dontTakeAction() {
+    this.message = 'NOT to take action now!';
+    this.decision = 'no';
   }
 
 }

@@ -8,7 +8,7 @@
         <th>Is True</th>
       </tr>
     </thead>
-    <tr>
+    <tr (click)="takeAction();" [class.active]="decision === 'yes'">
       <td>Take Action Now</td>
       <td>
         <span>
@@ -33,7 +33,7 @@
         </span>
       </td>
     </tr>
-    <tr>
+    <tr (click)="dontTakeAction();" [class.active]="decision === 'no'">
       <td>Don't Take Action Now</td>
       <td>
         <span>
@@ -59,4 +59,6 @@
       </td>
     </tr>
   </table>
+  <div *ngIf="isUndecided" class="decision">{{message}}</div>
+  <div *ngIf="!isUndecided" class="decision">You have decided <strong>{{message}}</strong></div>
 </div>

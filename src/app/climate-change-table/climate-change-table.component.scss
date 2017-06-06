@@ -7,7 +7,7 @@
   & span {
     display: inline-block;
     margin-right: 15px;
-    width: 35px; 
+    width: 35px;
     white-space: nowrap;
     > i {
       margin-right: 3px;
@@ -60,6 +60,9 @@ th {
       background-color: $table-active-color;
       cursor: pointer;
     }
+    > tr.active {
+      background-color: $table-active-color;
+    }
   }
   // Bottom align for column headings
   > thead > tr > th {
@@ -77,5 +80,14 @@ th {
         border-bottom: 5px solid $header-border-color;
       }
     }
+  }
+}
+
+.decision {
+  text-align: center;
+  padding: 15px 0;
+
+  & strong {
+    color: red;
   }
 }
