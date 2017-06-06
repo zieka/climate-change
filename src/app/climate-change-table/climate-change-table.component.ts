@@ -10,7 +10,7 @@ export type Decision = 'undecided' | 'yes' | 'no';
 export class ClimateChangeTableComponent implements OnInit {
 
   private message: string;
-  private decision: Decision;
+  public decision: Decision;
 
   constructor() {
     this.message = 'Pick a Row!';
