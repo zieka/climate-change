@@ -59,6 +59,6 @@
       </td>
     </tr>
   </table>
-  <div *ngIf="isUndecided" class="decision">{{message}}</div>
-  <div *ngIf="!isUndecided" class="decision">You have decided <strong>{{message}}</strong></div>
+  <div *ngIf="decision === 'undecided'" class="decision">{{message}}</div>
+  <div *ngIf="decision !== 'undecided'" class="decision">You have decided <strong>{{message}}</strong></div>
 </div>
