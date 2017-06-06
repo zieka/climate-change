@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ClimateChangeTableComponent } from './climate-change-table/climate-change-table.component';
+import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClimateChangeTableComponent
+    ClimateChangeTableComponent,
+    LoadingIndicatorComponent
   ],
   imports: [
     BrowserModule,
